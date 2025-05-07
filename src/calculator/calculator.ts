@@ -9,7 +9,7 @@
 // Se qualquer uma das duas falhar, o sistema pode ter comportamento inesperado — e isso viola o LSP.
 
 // Interface Segregation principle = A interface IOperation é pequena e específica, cada classe que implementa a interface tem apenas os métodos necessários para sua operação.
-// Dependency Inversion Principle = A classe Calculator não depende de classes de operações mas sim de uma abstração (interface IOperation). Isso permite que possamos criar novas operações sem modificar a classe Calculator.
+// Dependency Inversion Principle = Em vez de uma classe instanciar diretamente suas dependências (acoplando-se a elas), ela deve recebê-las de fora, geralmente por injeção de dependência (como no construtor).
 import { IOperation } from "../interfaces/IOperation";
 
 export class Calculator {
